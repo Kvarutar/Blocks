@@ -1,0 +1,70 @@
+.block
+    background: blue
+    width: calc(100%/3 - 5px)
+    height: calc(100vh/3 - 10px)
+    border-radius: 8px
+    margin-bottom: 5px
+    position: relative
+    &_zero
+        background: red
+    &__text
+        user-select: none
+        color: white
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &_squares
+        position: relative
+        &::after
+            content: ' '
+            width: 5px
+            height: 5px
+            background: yellow
+            left: 20px
+            top: 20px
+            position: absolute
+        &::before
+            content: ' '
+            width: 5px
+            height: 5px
+            background: yellow
+            right: 20px
+            bottom: 20px
+            position: absolute
+.octagon 
+    width: calc(100%/3 - 5px)
+    height: calc(100vh/3 - 10px)
+    background: blue
+    position: relative
+    margin-bottom: 5px
+    &::before 
+        content: ""
+        width: calc(100% - 58px)
+        height: 0
+        position: absolute
+        top: 0
+        left: 0
+        border-bottom: 29px solid blue
+        border-left: 29px solid white
+        border-right: 29px solid white
+    &::after 
+        content: ""
+        width: calc(100% - 58px)
+        height: 0
+        position: absolute
+        bottom: 0
+        left: 0
+        border-top: 29px solid blue
+        border-left: 29px solid white
+        border-right: 29px solid white
+    &_zero
+        background: red
+        &::before 
+            border-bottom: 29px solid red
+            border-left: 29px solid white
+            border-right: 29px solid white
+        &::after 
+            border-top: 29px solid red
+            border-left: 29px solid white
+            border-right: 29px solid white
